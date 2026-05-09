@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "ROFL x402 Solana Client",
+  "description": "Safely pays x402 HTTP 402 routes on Solana Devnet with local spending policy enforcement.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "ROFL x402",
+    "default_popup": "src/popup/index.html"
+  },
+  "background": {
+    "service_worker": "assets/service-worker.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["assets/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/injectedProvider.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}

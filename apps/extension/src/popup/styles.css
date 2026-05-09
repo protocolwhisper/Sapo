@@ -1,0 +1,335 @@
+:root {
+  color: #17201b;
+  background: #f6f7f3;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 380px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shell {
+  width: 380px;
+  min-height: 560px;
+  padding: 16px;
+  background: #f6f7f3;
+}
+
+.topbar,
+.panelHeader,
+.historyActions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topbar h1,
+.panel h2,
+.listItem h2 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.topbar h1 {
+  font-size: 22px;
+}
+
+.topbar p,
+.listItem p,
+.notice p {
+  color: #68716b;
+  margin: 3px 0 0;
+}
+
+.status {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #b7bdb7;
+}
+
+.statusOn {
+  background: #1c9a62;
+}
+
+.tabs {
+  background: #e7ebe4;
+  border-radius: 8px;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 16px 0;
+  padding: 3px;
+}
+
+.tabs button {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: #475149;
+  padding: 8px 6px;
+  text-transform: capitalize;
+}
+
+.tabs button.active {
+  background: #ffffff;
+  color: #17201b;
+  box-shadow: 0 1px 2px rgb(23 32 27 / 10%);
+}
+
+.view {
+  display: grid;
+  gap: 12px;
+}
+
+.emitterPanel,
+.panel,
+.providerCard,
+.listItem,
+.notice {
+  background: #ffffff;
+  border: 1px solid #dce2dc;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.emitterPanel h2,
+.panel h2,
+.providerCard h2,
+.listItem h2 {
+  font-size: 15px;
+}
+
+.panelHeader span {
+  color: #68716b;
+  font-size: 12px;
+}
+
+.emitterPanel {
+  background: #17201b;
+  border-color: #17201b;
+  color: #ffffff;
+}
+
+.emitterPanel .panelHeader span,
+.emitterPanel p {
+  color: #c8d8ce;
+}
+
+.emitterPanel p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin: 12px 0 0;
+}
+
+.timerBlock {
+  margin-top: 10px;
+}
+
+.timerBlock strong {
+  display: block;
+  font-size: 38px;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.flowLine {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.flowLine span,
+.flowLine strong {
+  background: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 7px;
+  color: #ffffff;
+  display: block;
+  font-size: 11px;
+  min-width: 0;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.flowLine strong {
+  background: #ffffff;
+  color: #17201b;
+}
+
+.buttonStack {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 7px;
+  min-height: 38px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.primaryButton {
+  background: #16664a;
+  border: 1px solid #16664a;
+  color: #ffffff;
+}
+
+.secondaryButton {
+  background: #ffffff;
+  border: 1px solid #cbd4ce;
+  color: #17201b;
+}
+
+.details,
+.compactDetails {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.details div,
+.compactDetails div,
+.metrics div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+dt,
+.metrics span,
+.field span {
+  color: #68716b;
+  font-size: 12px;
+}
+
+dd {
+  margin: 0;
+  max-width: 200px;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metrics {
+  background: #20392e;
+  border-radius: 8px;
+  color: #ffffff;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.metrics span {
+  color: #c5d6cc;
+}
+
+.notice strong {
+  font-size: 13px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid #cbd4ce;
+  border-radius: 7px;
+  padding: 9px;
+  width: 100%;
+}
+
+.switch {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.providerCard {
+  display: grid;
+  gap: 12px;
+}
+
+.providerActive {
+  border-color: #16664a;
+  box-shadow: inset 0 0 0 1px #16664a;
+}
+
+.providerTop {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.providerTop h2 {
+  margin: 0;
+}
+
+.providerTop p {
+  color: #68716b;
+  margin: 3px 0 0;
+}
+
+.providerTop > span {
+  background: #eef2ed;
+  border-radius: 999px;
+  color: #475149;
+  flex: 0 0 auto;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+.compactDetails {
+  margin-bottom: 0;
+}
+
+.historyActions {
+  gap: 8px;
+}
+
+.empty {
+  color: #68716b;
+  text-align: center;
+}
+
+.footerStatus {
+  color: #475149;
+  font-size: 12px;
+  margin-top: 12px;
+}
